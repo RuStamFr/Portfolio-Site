@@ -1,5 +1,18 @@
 @import url(./reset.css);
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Rufina", serif;
+  color: #000a2d;
+  margin-top: 0px;
+  font-style: normal;
+  font-weight: 500;
+  text-transform: normal;
+}
 header {
   width: 100%;
   position: sticky;
@@ -615,6 +628,62 @@ h3 {
   max-width: 100%;
   height: auto;
 }
+.wantToWork-area {
+  padding-top: 130px;
+  padding-bottom: 125px;
+  background-color: #f8f9fa;
+  background: url(../Img/section_bg02.jpg) no-repeat center center/cover;
+}
+.content h2 {
+  color: #ec5b53;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 0;
+  max-width: 55%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.content {
+  flex: 1 1 60%;
+  min-width: 200px;
+}
+
+.button-wrap {
+  flex: 0 0 16%;
+  min-width: 120px;
+  text-align: right;
+}
+
+.button {
+  display: inline-block;
+  padding: 18px 24px;
+  background-color: #ec5b53;
+  text-transform: capitalize;
+  font-family: "Rubik", sans-serif;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: all 0.3s;
+  font-weight: 500;
+}
+
+.button:hover {
+  background-color: #333;
+} 
 
 @media (max-width: 1200px) {
   #sec3 h2 {
@@ -653,6 +722,13 @@ h3 {
 }
 
 @media (max-width: 992px) {
+  .content {
+    flex: 1 1 70%;
+  }
+  .button-wrap {
+    flex: 0 0 25%;
+    text-align: right;
+  }
   #sec3 h2 {
     font-size: 1.6em;
   }
@@ -722,6 +798,14 @@ h3 {
   }
 }
 @media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .button-wrap {
+    text-align: left;
+    margin-top: 20px;
+  }
   #sec3 h2 {
     font-size: 1.4em;
   }
