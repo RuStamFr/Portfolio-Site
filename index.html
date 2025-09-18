@@ -6,6 +6,22 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/flaticon.css" />
+    <script
+      src="https://kit.fontawesome.com/5804d39f32.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Rufina:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
@@ -228,9 +244,122 @@
           </div>
         </div>
       </section>
-    </main>
-    <footer></footer>
+      <section id="reviews">
+        <div class="review-section">
+          <div class="review-header">
+            <h1>Some Positive Feedback That Encourage Us</h1>
+            <div class="review-controls">
+              <a href="#"><i class="fa-solid fa-arrow-left"></i></a>
+              <a href="#"><i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
 
+        <div class="review-list">
+          <div class="review-card">
+            <div class="card-user">
+              <img src="./Img/feedbck1.webp" alt="review1" />
+              <h3 class="user-name">Bradley Erickson</h3>
+              <p class="card-role">UI/UX Designer</p>
+            </div>
+            <p class="card-text">
+              Consectetur adipisicing elit, seddosdoe eiusmod tempor incididunt
+              utore etstes dolore magna aliqua. Ut imminim restai veniam, quis
+              nostrud.
+            </p>
+          </div>
+
+          <div class="review-card">
+            <div class="card-user">
+              <img src="./Img/feedbck2.webp" alt="review2" />
+              <h3 class="user-name">Bradley Erickson</h3>
+              <p class="card-role">UI/UX Designer</p>
+            </div>
+            <p class="card-text">
+              Consectetur adipisicing elit, seddosdoe eiusmod tempor incididunt
+              utore etstes dolore magna aliqua. Ut imminim restai veniam, quis
+              nostrud.
+            </p>
+          </div>
+
+          <div class="review-card">
+            <div class="card-user">
+              <img src="./Img/feedbck3.webp" alt="review3" />
+              <h3 class="user-name">Bradley Erickson</h3>
+              <p class="card-role">UI/UX Designer</p>
+            </div>
+            <p class="card-text">
+              Consectetur adipisicing elit, seddosdoe eiusmod tempor incididunt
+              utore etstes dolore magna aliqua. Ut imminim restai veniam, quis
+              nostrud.
+            </p>
+          </div>
+        </div>
+
+        <div class="partner-logos">
+          <img src="./Img/br1.webp" alt="brand1" />
+          <img src="./Img/br2.webp" alt="brand2" />
+          <img src="./Img/br3.webp" alt="brand3" />
+          <img src="./Img/br4.webp" alt="brand4" />
+        </div>
+      </section>
+      <section id="contact">
+        <div class="contact-container">
+          <div class="contact-info">
+            <h3>If Not Now, When? Let’s Work Together!</h3>
+            <p>
+              Consectetur adipiscing elit, sed do eiusmod tempor ididunt ut
+              labore et dolore magna aliqua. Quis ipsum suspendisces gravida.
+              Risus commodo viverra.
+            </p>
+            <img src="./Img/contactimg.webp" alt="Contact Image" />
+          </div>
+
+          <div class="contact-box">
+            <form>
+              <input type="text" placeholder="Name" required />
+              <input type="email" placeholder="Email" required />
+              <textarea placeholder="Message" required></textarea>
+              <button type="submit">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__top">
+        <img
+          src="./Img/footerlogo.webp"
+          alt="footer logo"
+          class="footer__logo"
+        />
+        <a href="mailto:hireme@portfolio.com" class="footer__email"
+          >hireme@portfolio.com</a
+        >
+        <p class="footer__address">221B Baker Street, Post office Box 353</p>
+        <p class="footer__address">Park Road, USA - 215431</p>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__bottom-left">
+          <p>
+            Copyright ©2025 All rights reserved | This template is made with ❤️
+            by <a href="">Colorlib</a>
+          </p>
+        </div>
+        <div class="footer__bottom-right">
+          <span class="footer__stay-connected">Stay Connected</span>
+          <div class="footer__social-icons">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-chrome"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div id="back-top">
+      <a href="#" title="Go to Top"><i class="fas fa-level-up-alt"></i></a>
+    </div>
     <script>
       const menuToggle = document.getElementById("menu-toggle");
       const mobileNav = document.querySelector(".mobile-nav");
@@ -250,6 +379,44 @@
         if (window.innerWidth > 992) {
           menuToggle.checked = false;
         }
+      });
+      const header = document.querySelector("header");
+      let isShown = true;
+
+      window.addEventListener("scroll", () => {
+        const scroll = window.scrollY;
+
+        if (scroll > 150) {
+          if (!isShown) {
+            header.classList.remove("hide");
+            isShown = true;
+          }
+        } else if (scroll > 0 && scroll <= 150) {
+          if (isShown) {
+            header.classList.add("hide");
+            isShown = false;
+          }
+        } else {
+          header.classList.remove("hide");
+          isShown = true;
+        }
+      });
+      const backTop = document.getElementById("back-top");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 150) {
+          backTop.classList.add("show");
+        } else {
+          backTop.classList.remove("show");
+        }
+      });
+
+      backTop.addEventListener("click", (e) => {
+        e.preventDefault();
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
       });
     </script>
   </body>
