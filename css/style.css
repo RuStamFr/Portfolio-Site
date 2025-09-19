@@ -948,6 +948,7 @@ h3 {
 .footer__bottom-left p {
   color: white;
   color: #393a50;
+  margin-right: 100px;
   font-weight: 300;
   font-size: 16px;
   line-height: 2;
@@ -1149,6 +1150,9 @@ h3 {
   .contact-box button {
     height: 50px;
     font-size: 15px;
+  }
+  .footer__bottom-left p {
+    margin-right: 0px;
   }
 
   .contact-box input,
